@@ -49,6 +49,7 @@ const login = (req, res) => {
       //토큰 발행
       const token = jwt.sign(
         {
+          id: loginUser.id,
           email: loginUser.email,
         },
         process.env.PRIVATE_KEY,
